@@ -1,0 +1,13 @@
+---
+
+- name: Execute basic task
+  import_tasks: basic.yml
+
+- name: Execute task2
+  import_tasks: build.yml
+
+- name: Execute task3
+  import_tasks: SonaNex.yml
+
+
+

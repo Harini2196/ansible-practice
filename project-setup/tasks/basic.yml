@@ -1,0 +1,14 @@
+---
+# Installing basic tools on all servers
+
+- name: Installing basic tools
+  yum:
+   name:
+    - git
+    - vim
+    - wget
+    - tar
+    - unzip
+    - java-1.8*
+    - curl
+   state: installed

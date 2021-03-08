@@ -1,0 +1,30 @@
+---
+
+# SonarQube and Nexus setup
+- name: installing sonarQube and nexus on a server hosted on different ports
+  get_url:
+     url: https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-6.7.7.zip
+     dest: /home/vagrant
+
+- name: installing sonarQube and nexus on a server hosted on different ports
+  get_url:
+     url: https://download.sonatype.com/nexus/oss/nexus-2.14.20-02-bundle.tar.gz
+     dest: /home/vagrant
+
+- name: Extract sonarqube repos
+  ansible.builtin.unarchive:
+    src: /home/vagrant/sonarqube-6.7.7.zip
+    dest: /home/vagrant
+    remote_src: yes
+
+- name: Extract nexus repos
+  ansible.builtin.unarchive:
+    src: /home/vagrant/nexus-2.14.20-02-bundle.tar.gz
+    dest: /home/vagrant
+    remote_src: yes
+
+- name: Running the SonarQube repo file script
+  script: /home/vagrant/sonarqube/sonarqube-6.7.7/bin/linux-x36-64/sonar.sh
+
+- name: Running the Nexus repo file script
+  script: /home/vagrant/nexus-2.14.20-02/bin/nexus
