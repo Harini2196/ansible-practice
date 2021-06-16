@@ -1,9 +1,8 @@
 ---
 # vars file for ssh-users
  users_list:
-    - Ravi
-    - Kajal
-    - Preeti
-    - Robert
-    - william
+    - ravi
+    - robert
+    - williams
+    - kathy
 
