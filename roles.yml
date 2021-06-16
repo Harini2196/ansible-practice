@@ -1,0 +1,7 @@
+---
+
+- name: Invoke roles
+  hosts: ec2-servers
+  become: yes
+  roles:
+   - ssh-users

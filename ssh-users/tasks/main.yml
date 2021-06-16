@@ -1,0 +1,8 @@
+---
+# tasks file for ssh-users
+
+- name: Execute tasks
+  import_tasks: users.yml
+  
+- name: Execute task
+  import_tasks:  auth.yml
