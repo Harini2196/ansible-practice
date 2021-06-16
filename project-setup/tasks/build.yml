@@ -1,8 +1,0 @@
----
-# Install build tool on build server
-
-- name: Installing build tool on build server
-  yum:
-   name:
-    - maven
-   state: installed
